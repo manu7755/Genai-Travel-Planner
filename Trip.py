@@ -1,9 +1,9 @@
 # manan.py
 
 import streamlit as st
-from agent_setup  import agent_executor # ✅ now it will work
+from agent_setup  import agent_executor 
 
-st.title("🌍 Manan Travel Planner")
+st.title(" Manan Travel Planner")
 
 origin = st.text_input("Origin City")
 destination = st.text_input("Destination City")
@@ -20,5 +20,6 @@ if st.button("Plan My Trip"):
         Include 3 travel options, hotel suggestions, and a 3-day itinerary.
         """
         response = agent_executor.invoke({"input": query})
-        st.markdown("### ✅ Your Personalized Plan:")
+        st.markdown("###  Your Personalized Plan:")
         st.write(response["output"])
+
